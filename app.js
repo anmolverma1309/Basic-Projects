@@ -1,29 +1,33 @@
-let boxes=document.querySelectorAll(".box");
-let resetbutton=document.querySelector("#reset-button");
-let msgcontainer= document.querySelector(".message-container");
-let msg= document.querySelector("#msg");
-let newGameBtn= document.querySelector("#new-button");
+let boxes = document.querySelectorAll(".box");
+let resetbutton = document.querySelector("#reset-button");
+let msgcontainer = document.querySelector(".message-container");
+let msg = document.querySelector("#msg");
+let newGameBtn = document.querySelector("#new-button");
 
-let turn0=true;
-let count=0;
+
+let turn0 = true;
+let count = 0;
+
 
 const winPatterns=[
     [0,1,2],
-    [0,3,6],
-    [0,4,8],
-    [1,4,7],
-    [2,5,8],
-    [2,4,6],
-    [3,4,5],
-    [6,7,8],
+    [0, 3, 6],
+    [0, 4, 8],
+    [1, 4, 7],
+    [2, 5, 8],
+    [2, 4, 6],
+    [3, 4, 5],
+    [6, 7, 8],
 ]
 
 const resetGame=() =>{
-    turn0=true;
+    turn0 = true;
     enablebuttons();
     msgcontainer.classList.add("hide");
     count: 0;
 }
+
+
 
 boxes.forEach((box) => {
     box.addEventListener("click",() => {
